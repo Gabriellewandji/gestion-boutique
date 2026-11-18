@@ -1,0 +1,111 @@
+* { 
+    box-sizing: border-box; 
+}
+body { 
+    margin: 0; 
+    font-family: system-ui, sans-serif; 
+    background: #f5f6f8; 
+    color: #1f2933; }
+nav { 
+    background: #4b8dea; 
+    color:#1f2933; 
+    padding: 12px 24px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between;
+    gap: 300px; }
+nav h1 { 
+    margin: 0; 
+    font-size: 1.2rem;
+    color: #1f2933;
+}
+nav ul { 
+    list-style: none; 
+    margin: 2px; 
+    padding: 10px; 
+    display: flex; 
+    gap: 8px; 
+    justify-content: space-between;
+}
+.menu-link { 
+    color: #cfe0f5; 
+    text-decoration: none; 
+    padding: 6px 12px; 
+    border-radius: 4px; 
+    
+}
+.menu-link:hover, .menu-link.active { 
+    background: #fff; 
+    color: #1f3a5f; }
+main { 
+    max-width: 900px; 
+    margin: 24px auto;
+    padding: 0 16px; }
+.hidden { 
+    display: none !important; }
+form { 
+    flex-direction: column;
+    background: #d0def6; 
+    padding: 16px; 
+    border-radius: 6px; 
+    display: grid; 
+    gap: 12px; 
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); align-items: end; }
+label { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 4px; 
+    font-size: .9rem; 
+}
+fieldset label { 
+    flex-direction: row; 
+    align-items: center; 
+}
+input, select { 
+    padding: 8px; 
+    border: 1px solid #b8c2cc; 
+    border-radius: 4px; 
+    font: inherit; 
+}
+button { 
+    padding: 8px 14px; 
+    border: 0; 
+    border-radius: 4px; 
+    background: #1f3a5f; 
+    color: #fff; 
+    cursor: pointer; 
+    font: inherit; 
+}
+button.cancel, button.edit { 
+    background: #6b7c93; 
+}
+button.delete { 
+    background: #b3261e; 
+}
+table { 
+    width: 100%; 
+    margin-top: 20px; 
+    border-collapse: collapse; 
+    background: #fff; }
+th, td { 
+    padding: 8px; 
+    border: 1px solid #d9dee4; 
+    text-align: left; 
+}
+th { 
+    background: #eef1f5; 
+}
+td.actions { 
+    white-space: nowrap; 
+}
+td.actions button { 
+    padding: 4px 10px; 
+    font-size: .85rem; 
+}
+.empty { 
+    margin-top: 20px; 
+    color: #6b7c93; 
+}
+:focus-visible { 
+    outline: 3px solid #f0a202; 
+    outline-offset: 2px; }

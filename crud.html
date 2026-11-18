@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion boutique</title>
+    <link rel="stylesheet" href="crud.css">
+</head>
+<body>
+    <nav>
+        <h1>GESTION BOUTIQUE</h1>
+        <ul>
+            <li><a href="#client" class="menu-link">Clients</a></li>
+            <li><a href="#produit" class="menu-link">Produits</a></li>
+            <li><a href="#categorie" class="menu-link">Catégories</a></li>
+            <li><a href="#commande" class="menu-link">Commandes</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="client" class="tab-section">
+            <p>good morning ,i hpope that you pass a good day,veuillez remplir les informations concernant le client. merci!!!</p>
+            <form id="clientForm">
+                <label>Nom <input type="text" name="nom" required></label>
+                <label>Téléphone <input type="tel" name="tel" required></label>
+                <label>Email <input type="email" name="email" required></label>
+                <button type="submit">Ajouter</button>
+                <button type="button" class="cancel hidden">Annuler</button>
+            </form>
+            <div id="clients-table-container"></div>
+        </section>
+
+        <section id="produit" class="tab-section hidden">
+            <form id="produitForm">
+                <label>Nom <input type="text" name="nom" required></label>
+                <label>Prix <input type="number" name="prix" min="0" step="0.01" required></label>
+                <fieldset>
+                    <legend>Stock</legend>
+                    <label><input type="radio" name="stock" value="disponible" checked> Disponible</label>
+                    <label><input type="radio" name="stock" value="indisponible"> Indisponible</label>
+                </fieldset>
+                <label>Catégorie
+                    <select name="categorieId" required></select>
+                </label>
+                <button type="submit">Ajouter</button>
+                <button type="button" class="cancel hidden">Annuler</button>
+            </form>
+            <div id="produits-table-container"></div>
+        </section>
+
+        <section id="categorie" class="tab-section hidden">
+            <form id="categorieForm">
+                <label>Nom de la catégorie <input type="text" name="nom" required></label>
+                <button type="submit">Ajouter</button>
+                <button type="button" class="cancel hidden">Annuler</button>
+            </form>
+            <div id="categories-table-container"></div>
+        </section>
+
+        <section id="commande" class="tab-section hidden">
+            <form id="commandeForm">
+                <label>Client <select name="clientId" required></select></label>
+                <label>Produit <select name="produitId" required></select></label>
+                <label>Quantité <input type="number" name="quantite" min="1" value="1" required></label>
+                <button type="submit">Ajouter</button>
+                <button type="button" class="cancel hidden">Annuler</button>
+            </form>
+            <div id="commandes-table-container"></div>
+        </section>
+    </main>
+
+    <!-- crud.js en premier : il contient les fonctions partagées -->
+    <script src="crud.js"></script>
+    <script src="client.js"></script>
+    <script src="categorie.js"></script>
+    <script src="produit.js"></script>
+    <script src="commande.js"></script>
+</body>
+</html>
